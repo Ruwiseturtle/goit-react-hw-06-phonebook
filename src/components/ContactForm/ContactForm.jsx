@@ -22,11 +22,13 @@ const ContactForm = () => {
   //і в ту ф-цію відправляється обьект з даними нового користувача
   const handleSubmit = e => {
     e.preventDefault();
-    const nameInput = name;
-    const numberInput = number;
+    const nameInput = name.trimStart().trimEnd();
+    const numberInput = number.trimStart().trimEnd();
     
     const isThereSuchUser = contacts.some(
-      ({ name, number }) => name === nameInput && number === numberInput);
+      ({ name, number }) =>
+        name.toLowerCase() === nameInput.toLowerCase() && number === numberInput
+    );
     
     if (isThereSuchUser) {
       Notiflix.Notify.info(`${name} is slready in contact`);

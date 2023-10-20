@@ -2,10 +2,12 @@
 import ContactForm from './ContactForm/ContactForm';
 import Filter from './Filter/Filter';
 import ContactList from './ContactList/ContactList';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 
 const App = () => {
-  
+  const contacts = useSelector(state => state.contactBook.contacts);
+  console.log(contacts);
   return (
     <div>
       <h1 className="title">Phonebook</h1>

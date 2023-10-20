@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Notiflix from 'notiflix';
 import './ContactForm.css';
 import { addContact, setName, setNumber } from '../../redux/phoneBookSlice';

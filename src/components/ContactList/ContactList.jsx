@@ -1,7 +1,6 @@
 import './ContactList.css';
 import { deleteContact} from '../../redux/phoneBookSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import Notiflix from 'notiflix';
 
 const ContactList = () => {
 
